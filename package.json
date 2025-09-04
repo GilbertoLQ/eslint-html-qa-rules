@@ -1,0 +1,33 @@
+{
+  "name": "eslint-plugin-html-qa",
+  "version": "1.0.0",
+  "description": "ESLint rules for HTML QA semantics",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "lint": "eslint . --ext .ts",
+    "test": "node -e \"console.log('no tests yet')\""
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GilbertoLQ/eslint-html-qa-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GilbertoLQ/eslint-html-qa-rules/issues"
+  },
+  "homepage": "https://github.com/GilbertoLQ/eslint-html-qa-rules#readme",
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^20.19.13",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2"
+  }
+}

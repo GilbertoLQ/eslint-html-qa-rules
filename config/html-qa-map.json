@@ -1,0 +1,203 @@
+{
+  "input": {
+    "requiredAttributes": [
+      "id",
+      "formControlName",
+      "aria-describedby",
+      "aria-invalid",
+      "inputmode",
+      "autocomplete",
+      "data-testid"
+    ],
+    "notes": [
+      "Nombre accesible/estado, teclado virtual e hints de autocompletado."
+    ]
+  },
+  "button": {
+    "requiredAttributes": ["type", "data-testid"],
+    "mustHaveVisibleText": true,
+    "fallbackAriaLabelIfNoText": true,
+    "notes": [
+      "El botón debe tener nombre accesible; si es solo icono, usa aria-label.",
+      "Evitar rely en default type=submit."
+    ]
+  },
+  "select": {
+    "requiredAttributes": [
+      "id",
+      "formControlName",
+      "aria-invalid",
+      "data-testid"
+    ]
+  },
+  "textarea": {
+    "requiredAttributes": [
+      "id",
+      "formControlName",
+      "aria-describedby",
+      "aria-invalid",
+      "data-testid"
+    ]
+  },
+  "label": {
+    "requiredAttributes": ["for"],
+    "notes": [
+      "Asociación explícita con control por id (o relación implícita si el control está dentro)."
+    ]
+  },
+  "img": {
+    "requiredAttributes": ["alt"],
+    "altShouldNotBeEmpty": true,
+    "notes": ["Texto alternativo obligatorio ('' si decorativa)."]
+  },
+  "a": {
+    "requiredAttributes": ["href", "data-testid"],
+    "mustHaveVisibleText": true,
+    "fallbackAriaLabelIfNoText": true,
+    "notes": ["El enlace debe tener nombre accesible (texto o aria-label)."]
+  },
+  "iframe": {
+    "requiredAttributes": ["title", "data-testid"],
+    "notes": ["title describe el contenido embebido."]
+  },
+  "form": {
+    "recommendedAttributes": ["aria-labelledby"],
+    "requiredAttributes": ["data-testid"],
+    "ariaLabelWhenMultiple": true
+  },
+  "table": {
+    "requiredAttributes": ["data-testid"],
+    "recommendedAttributes": ["aria-describedby"],
+    "recommendCaption": true
+  },
+  "th": {
+    "requiredAttributes": ["scope"]
+  },
+  "ul": { "requiredAttributes": ["data-testid"] },
+  "ol": { "requiredAttributes": ["data-testid"] },
+  "li": {
+    "requiredAttributes": ["data-testid"],
+    "conditional": {
+      "whenInteractive": {
+        "requireAttributes": ["role"],
+        "roleShouldBe": "listitem"
+      }
+    }
+  },
+  "nav": {
+    "requiredAttributes": ["data-testid"],
+    "ariaLabelWhenMultiple": true
+  },
+  "main": {
+    "requiredAttributes": ["data-testid"],
+    "ariaLabelWhenMultiple": true
+  },
+  "header": {
+    "requiredAttributes": ["data-testid"],
+    "ariaLabelWhenMultiple": true
+  },
+  "footer": {
+    "requiredAttributes": ["data-testid"],
+    "ariaLabelWhenMultiple": true
+  },
+  "aside": {
+    "requiredAttributes": ["data-testid"],
+    "ariaLabelWhenMultiple": true
+  },
+  "h1-h6": {
+    "tags": ["h1", "h2", "h3", "h4", "h5", "h6"],
+    "requiredAttributes": ["data-testid"],
+    "notes": ["Útil para asserts de títulos en tests."]
+  },
+  "picture": {
+    "recommendedAttributes": ["srcset"]
+  },
+  "source": {
+    "requiredAttributes": ["src", "type"]
+  },
+  "audio": {
+    "requiredAttributes": ["controls", "data-testid"],
+    "recommendedAttributes": ["aria-label"]
+  },
+  "video": {
+    "requiredAttributes": ["controls", "data-testid"],
+    "recommendedAttributes": ["aria-label"]
+  },
+  "track": {
+    "requiredAttributes": ["kind", "srclang", "label"]
+  },
+  "dialog": {
+    "requiredAttributes": ["role", "data-testid"],
+    "recommendedAttributes": ["aria-modal", "aria-labelledby"]
+  },
+  "details": {
+    "requiredAttributes": ["data-testid"]
+  },
+  "summary": {
+    "requiredAttributes": ["data-testid"],
+    "recommendedAttributes": ["aria-controls"]
+  },
+  "output": {
+    "requiredAttributes": ["for", "data-testid"]
+  },
+  "progress": {
+    "requiredAttributes": ["value", "max", "data-testid"]
+  },
+  "meter": {
+    "requiredAttributes": ["value", "min", "max", "data-testid"]
+  },
+  "abbr": {
+    "requiredAttributes": ["title", "data-testid"]
+  },
+  "toast": {
+    "requiredAttributes": ["role", "aria-live"],
+    "shouldNotUseDisplayNone": true,
+    "notes": ["Para anuncios, aria-live y no ocultar con display: none."]
+  },
+  "div": {
+    "requiredAttributes": []
+  },
+  "span": {
+    "requiredAttributes": []
+  },
+  "fieldset": {
+    "requiredAttributes": ["data-testid"],
+    "notes": ["Agrupa campos; usar legend para accesibilidad."]
+  },
+  "legend": {
+    "requiredAttributes": ["data-testid"],
+    "notes": ["Descripción accesible del fieldset."]
+  },
+  "section": {
+    "requiredAttributes": ["data-testid"],
+    "ariaLabelWhenMultiple": true
+  },
+  "article": {
+    "requiredAttributes": ["data-testid"],
+    "ariaLabelWhenMultiple": true
+  },
+  "figure": {
+    "recommendedAttributes": ["data-testid"]
+  },
+  "figcaption": {
+    "requiredAttributes": ["data-testid"]
+  },
+  "svg": {
+    "requiredAttributes": ["role", "aria-label"],
+    "fallbackAriaLabelIfNoTitle": true
+  },
+  "canvas": {
+    "requiredAttributes": ["role", "aria-label"],
+    "fallbackAriaLabelIfNoTitle": true
+  },
+  "hr": {
+    "requiredAttributes": ["role", "data-testid"],
+    "recommendedAttributes": ["aria-label"]
+  },
+  "option": {
+    "requiredAttributes": ["value", "data-testid"]
+  },
+  "caption": {
+    "requiredAttributes": ["data-testid"]
+  }
+}
